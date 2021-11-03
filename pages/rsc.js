@@ -1,3 +1,6 @@
+/**@jsxRuntime classic */
+/** @jsx jsx */
+import {css, jsx} from '@emotion/react';
 import { Suspense } from 'react'
 
 // Shared Components
@@ -38,7 +41,9 @@ function NewsWithData() {
 
 export default function News() {
   return (
-    <Page>
+    <Page css={css`
+      font-weight: bold;
+    `}>
       <Suspense fallback={<Spinner />}>
         <NewsWithData />
       </Suspense>
